@@ -1,0 +1,53 @@
+# ===== Veyrion HUD (bossbar kanan-atas) =====
+timezone: Asia/Jakarta
+date-format: "dd/MM/yyyy"
+time-format: "HH:mm"
+
+# Interval refresh HUD (tick). 20 = 1 detik.
+update-interval-ticks: 20
+
+# Lebar layar dalam "GUI pixel" = lebar window game / GUI scale.
+# Contoh: window 1920 + GUI scale 3 = 640. Window 1402 + scale 2 = 701.
+# Ini nilai default; tiap player bisa atur sendiri dengan /hud width <px>.
+gui-width: 700
+
+# Jarak HUD dari tepi kanan layar (GUI pixel).
+margin: 6
+
+# Lebar maju (advance) glyph di font pack = height di hud.json + 1.
+# Ubah hanya kalau kamu ganti height di hud.json.
+glyph-advance:
+  icon: 10
+  logo: 25
+
+# Coin awal untuk player baru.
+starting-coin: 0
+
+# true = player bebas ganti ras sendiri kapan saja.
+# false = player hanya bisa pilih sekali, ganti lewat admin (/race set).
+allow-self-change-race: false
+
+# Format teks tiap baris. Placeholder: {online} {coin} {race} {kingdom}
+format:
+  online: "{online} Online"
+  coin: "{coin}"
+  race: "{race}"
+  kingdom: "{kingdom}"
+
+no-race: "Belum Pilih Ras"
+no-kingdom: "Tanpa Kingdom"
+
+# Warna HUD (hex). Ikon PNG putih, jadi ikon ikut warna teks di sebelahnya.
+colors:
+  date: "#FFD479"
+  time: "#7FDBFF"
+  online: "#6BFF8F"
+  coin: "#FFC83D"
+  kingdom: "#C792FF"
+  logo: "#FFFFFF"
+  race:
+    human: "#7FB5FF"
+    beast: "#FF9F43"
+    elf: "#B8FF6B"
+    dragon: "#FF5C5C"
+    none: "#B0B0B0"

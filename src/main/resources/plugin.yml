@@ -1,0 +1,34 @@
+name: VeyrionHud
+version: 1.2.0
+main: com.veyrion.hud.VeyrionHud
+api-version: '1.21'
+authors: [Veyrion]
+description: Custom HUD Veyrion kanan-atas + addon Skript (coin, ras, kingdom, teks HUD)
+depend: [Skript]
+
+commands:
+  coin:
+    description: Lihat / kirim / atur coin
+    usage: /coin [player] | /coin pay <player> <jumlah> | /coin <give|take|set> <player> <jumlah>
+  race:
+    description: Pilih / atur ras
+    usage: /race [human|beast|elf|dragon] | /race <set|reset> <player> [ras]
+  kd:
+    description: Sistem kingdom
+    usage: /kd <add|remove|list|join|leave|info|set>
+    aliases: [kingdom]
+  hud:
+    description: Atur HUD sendiri (on/off, GUI scale, geser)
+    usage: /hud <on|off|scale <1-4|auto>|res <w> <h>|width <px>|shift <px>>
+  veyrionhud:
+    description: Reload plugin HUD
+    usage: /veyrionhud reload
+    aliases: [vhud]
+
+permissions:
+  veyrionhud.admin:
+    description: Atur coin, ras, dan kingdom player lain
+    default: op
+  veyrionhud.kingdom.add:
+    description: Buat / hapus kingdom (/kd add, /kd remove)
+    default: op
